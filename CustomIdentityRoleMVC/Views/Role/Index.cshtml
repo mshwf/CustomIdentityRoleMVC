@@ -1,0 +1,19 @@
+﻿@using CustomIdentityRoleMVC.Models;
+@model IEnumerable<MIdentityRole>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<h1>@Html.ActionLink("Create New Role", "Create")</h1>
+<hr />
+@if (Model != null)
+{
+    <ol>
+        @foreach (var r in Model)
+        {
+            <li><h3>@r.Name</h3></li>
+            @r.Description
+        }
+    </ol>
+}
